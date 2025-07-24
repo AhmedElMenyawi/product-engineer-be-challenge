@@ -1,4 +1,4 @@
-# 📌 Who, What, When – Accountability API Challenge
+# 📌 Who, What, When - API Challenge
 
 Welcome to the Hello Chef take-home challenge!
 
