@@ -54,6 +54,7 @@ These are not required but will help showcase your product sense:
 - Basic authentication or user ownership control
 - A simple UI or Postman collection
 - Swagger/OpenAPI docs
+- Parse uploaded image to a who, what, when list
 
 ---
 
