@@ -14,7 +14,7 @@ Build a backend API that lets users:
 - Define a time range (`When`)
 - Mark things as complete ✅
 
-This isn’t about scale or completeness — we want to see your **code clarity, product thinking, and ownership mindset**.
+This isn’t about scale or completeness, we want to see your **code clarity, product thinking, and ownership mindset**.
 
 ---
 
@@ -52,8 +52,8 @@ These are not required but will help showcase your product sense:
 
 Please include short written answers (in your README or as comments in the code):
 1. **How could this be used for recurring team planning (e.g. weekly check-ins)?**
-2. **What tradeoffs would you make to support 100K+ records or users?**
-3. **If your users were non-technical (e.g. ops managers), how would you adapt the interface or structure?**
+2. **If this system were used by multiple teams, how would you ensure it remains useful but not cluttered?**
+3. **What signals would you look for to know if this tool is actually helping a team?**
 
 ---
 
