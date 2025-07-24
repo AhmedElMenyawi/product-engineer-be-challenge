@@ -2,7 +2,7 @@
 
 Welcome to the Hello Chef take-home challenge!
 
-This project simulates a simple but powerful system used internally by our team: tracking **Who** is doing **What**, and **When**. It’s inspired by real accountability tools used by Product Engineering leads at Hello Chef — and we’re excited to see how you bring it to life.
+This project simulates a simple but powerful system used internally by our team: tracking **Who** is doing **What**, and **When**. It’s inspired by real accountability tools used by Product Engineering leads at Hello Chef and we’re excited to see how you bring it to life.
 
 ---
 
