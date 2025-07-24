@@ -6,7 +6,7 @@ This project simulates a simple but powerful system used internally by our team:
 
 ---
 
-## 🎯 The Goal
+## The Goal
 
 Build a backend API that lets users:
 - Create and assign tasks to people (`Who`)
@@ -18,9 +18,9 @@ This isn’t about scale or completeness — we want to see your **code clarity,
 
 ---
 
-## 🧱 Core Requirements
+## Core Requirements
 
-### 📌 Entities
+### Entities
 You should model at least the following:
 - **Person**: name, email
 - **Commitment**: description (`what`), `done` status, optional tags
@@ -30,7 +30,7 @@ You should model at least the following:
 
 ---
 
-### 🧪 Suggested Endpoints
+### Suggested Endpoints
 
 | Endpoint                | Description                                           |
 |------------------------|-------------------------------------------------------|
@@ -40,14 +40,14 @@ You should model at least the following:
 | `PATCH /commitments/:id` | Mark a commitment as done                          |
 | `DELETE /commitments/:id` | Delete a commitment                               |
 
-#### 🔍 Filters for `GET /commitments`
+#### Filters for `GET /commitments`
 - By person
 - By completion status
 - By date range (`start_date`, `end_date`)
 
 ---
 
-### ⭐ Bonus (Optional)
+### Bonus (Optional)
 These are not required but will help showcase your product sense:
 - `POST /bulk`: Accept a list of “Who, What, When” entries in JSON
 - Status endpoint: Count of completed commitments by week/month
@@ -57,7 +57,7 @@ These are not required but will help showcase your product sense:
 
 ---
 
-## 🧠 Product Thinking Prompts
+## Something to consider
 
 Please include short written answers (in your README or as comments in the code):
 1. **How could this be used for recurring team planning (e.g. weekly check-ins)?**
@@ -66,7 +66,7 @@ Please include short written answers (in your README or as comments in the code)
 
 ---
 
-## 🧰 Technical Expectations
+## Technical Expectations
 
 - Use Laravel (preferred), or any modern PHP framework
 - Include setup instructions (see below)
@@ -76,7 +76,7 @@ Please include short written answers (in your README or as comments in the code)
 
 ---
 
-## ✅ Sample Data (Optional)
+## Sample Data (Optional)
 
 | Who   | What                                           | When (End)    | Done |
 |-------|------------------------------------------------|---------------|------|
@@ -87,6 +87,4 @@ Please include short written answers (in your README or as comments in the code)
 ---
 
 ## Submission
-Please send us:
-
-A link to your GitHub repo (public or invite)
+You can fork this public repo and send us a link to your GitHub repo (public or invite)
