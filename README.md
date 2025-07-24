@@ -30,17 +30,7 @@ You should model at least the following:
 
 ---
 
-### Suggested Endpoints
-
-| Endpoint                | Description                                           |
-|------------------------|-------------------------------------------------------|
-| `POST /people`         | Create a person (`name`, `email`)                    |
-| `POST /commitments`    | Create a new commitment linked to a person and dates |
-| `GET /commitments`     | List commitments with filters (see below)            |
-| `PATCH /commitments/:id` | Mark a commitment as done                          |
-| `DELETE /commitments/:id` | Delete a commitment                               |
-
-#### Filters for `GET /commitments`
+#### Filters
 - By person
 - By completion status
 - By date range (`start_date`, `end_date`)
