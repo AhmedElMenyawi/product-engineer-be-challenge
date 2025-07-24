@@ -29,7 +29,7 @@ You should model at least the following:
 > You may separate `Commitment` and `Event`, or keep them unified if preferred.
 
 ---
-
+#### Core Endpoints
 #### Filters
 - By person
 - By completion status
