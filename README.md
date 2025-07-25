@@ -20,20 +20,16 @@ This isn’t about scale or completeness, we want to see your **code clarity, pr
 
 ## Core Requirements
 
-### Entities
-You should model at least the following:
-- **Person**: name, email
-- **Commitment**: description (`what`), `done` status, optional tags
-- **Timeframe**: start date, end date (part of a commitment)
+Your solution should demonstrate your ability to design and build a simple but usable API that supports a recurring workflow like team accountability or planning.
+At a minimum, it should let users:
 
-> You may separate `Commitment` and `Event`, or keep them unified if preferred.
+- Create people and assign them responsibilities (“who” and “what”)
+- Set a time range for each commitment (“when”)
+- Mark things as done
+- View a filtered list of commitments
+- Remove an entry
 
----
-#### Core Endpoints
-#### Filters
-- By person
-- By completion status
-- By date range (`start_date`, `end_date`)
+You’re welcome to interpret the structure and naming in a way that feels clear and maintainable to you.
 
 ---
 
@@ -72,8 +68,8 @@ Please include short written answers (in your README or as comments in the code)
 | Who   | What                                           | When (End)    | Done |
 |-------|------------------------------------------------|---------------|------|
 | Ants  | Inform accountability for Product Engineer role| 2025-07-04    | ✅    |
-| Ants  | Review team AI tools ("use it or lose it")     | 2025-07-25    | ❌    |
-| Ants  | Plan use of Product Engineering gaps           | 2025-08-01    | ❌    |
+| Raif  | Review team AI tools ("use it or lose it")     | 2025-07-25    | ❌    |
+| Mohsin  | Plan use of Product Engineering gaps           | 2025-08-01  | ❌    |
 
 ---
 
