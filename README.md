@@ -56,18 +56,18 @@ Please include short written answers (in your README or as comments in the code)
 ## Technical Expectations
 
 - Use Laravel (preferred), or any modern PHP framework
-- Include setup instructions (see below)
+- Include setup instructions
 - Dockerized setup is appreciated but not mandatory
 - Include any test coverage or CI steps you’d normally use
 - Use migrations and sensible model structure
 
 ---
 
-## Sample Data (Optional)
+## Sample Data
 
 | Who   | What                                           | When (End)    | Done |
 |-------|------------------------------------------------|---------------|------|
-| Ants  | Inform accountability for Product Engineer role| 2025-07-04    | ✅    |
+| Anthony  | Inform the team accountability for Product Engineer role| 2025-07-04    | ✅    |
 | Raif  | Review team AI tools ("use it or lose it")     | 2025-07-25    | ❌    |
 | Mohsin  | Plan use of Product Engineering gaps           | 2025-08-01  | ❌    |
 
