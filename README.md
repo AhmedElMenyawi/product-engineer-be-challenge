@@ -74,4 +74,4 @@ Please include short written answers (in your README or as comments in the code)
 ---
 
 ## Submission
-You can fork this public repo and send us a link to your GitHub repo (public or invite)
+You can fork this public repo and send us a link to your GitHub repo (public or invite) via my email at anthony@hellochef.me
