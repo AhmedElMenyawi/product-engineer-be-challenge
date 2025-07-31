@@ -38,8 +38,8 @@ These are not required but will help showcase your product sense:
 - `POST /bulk`: Accept a list of “Who, What, When” entries in JSON
 - Status endpoint: Count of completed commitments by week/month
 - Basic authentication or user ownership control
-- A simple UI or Postman collection
-- Swagger/OpenAPI docs
+- A Postman collection to test the API.
+- Docs for the API (e.g. Swagger, Postman)
 - Parse uploaded image to a who, what, when list
 
 ---
