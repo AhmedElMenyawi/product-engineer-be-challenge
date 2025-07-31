@@ -1,77 +1,66 @@
-# 📌 Who, What, When - API Challenge
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-Welcome to the Hello Chef take-home challenge!
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-This project simulates a simple but powerful system used internally by our team: tracking **Who** is doing **What**, and **When**. It’s inspired by real accountability tools used by different teams at Hello Chef and we’re excited to see how you bring it to life.
+## About Laravel
 
----
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-## The Goal
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Build a backend API that lets users:
-- Create and assign tasks to people (`Who`)
-- Describe what needs to be done (`What`)
-- Define a time range (`When`)
-- Mark things as complete ✅
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-This isn’t about scale or completeness, we want to see your **code clarity, product thinking, and ownership mindset**.
+## Learning Laravel
 
----
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-## Core Requirements
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-Your solution should demonstrate your ability to design and build a simple but usable API that supports a recurring workflow like team accountability or planning.
-At a minimum, it should let users:
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-- Create people and assign them responsibilities (“who” and “what”)
-- Set a time range for each commitment (“when”)
-- Mark things as done
-- View a filtered list of commitments
-- Remove an entry
+## Laravel Sponsors
 
-You’re welcome to interpret the structure and naming in a way that feels clear and maintainable to you.
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
----
+### Premium Partners
 
-### Bonus (Optional)
-These are not required but will help showcase your product sense:
-- `POST /bulk`: Accept a list of “Who, What, When” entries in JSON
-- Status endpoint: Count of completed commitments by week/month
-- Basic authentication or user ownership control
-- A Postman collection to test the API.
-- Docs for the API (e.g. Swagger, Postman)
-- Parse uploaded image to a who, what, when list
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[WebReinvent](https://webreinvent.com/)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Jump24](https://jump24.co.uk)**
+- **[Redberry](https://redberry.international/laravel/)**
+- **[Active Logic](https://activelogic.com)**
+- **[byte5](https://byte5.de)**
+- **[OP.GG](https://op.gg)**
 
----
+## Contributing
 
-## Something to consider
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-Please include short written answers (in your README or as comments in the code):
-1. **How could this be used for recurring team planning (e.g. weekly check-ins)?**
-2. **If this system were used by multiple teams, how would you ensure it remains useful but not cluttered?**
-3. **What signals would you look for to know if this tool is actually helping a team?**
+## Code of Conduct
 
----
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Technical Expectations
+## Security Vulnerabilities
 
-- Use Laravel (preferred), or any modern PHP framework
-- Include setup instructions
-- Dockerized setup is appreciated but not mandatory
-- Include any test coverage or CI steps you’d normally use
-- Use migrations and sensible model structure
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
----
+## License
 
-## Sample Data
-
-| Who   | What                                           | When (End)    | Done |
-|-------|------------------------------------------------|---------------|------|
-| Anthony  | Inform the team accountability for Product Engineer role| 2025-07-04    | ✅    |
-| Raif  | Review team AI tools ("use it or lose it")     | 2025-07-25    | ❌    |
-| Mohsin  | Plan use of Product Engineering gaps           | 2025-08-01  | ❌    |
-
----
-
-## Submission
-You can fork this public repo and send us a link to your GitHub repo (public or invite) via my email at anthony@hellochef.me
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
