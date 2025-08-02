@@ -11,12 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // Updated directly here as the project is built from scratch, on existing projects I would use the following command:
+        // php artisan make:migration create_add_new_columns_to_users_table --table=users
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('first_name');
+            $table->string('last_name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();
         });
