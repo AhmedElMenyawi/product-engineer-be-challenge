@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+    environment:
+      - DB_HOST=mysql
+      - DB_DATABASE=hellochef
+      - DB_USERNAME=root
+      - DB_PASSWORD=password
+    volumes:
+      - ./storage:/var/www/html/storage
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: hellochef
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data: 
