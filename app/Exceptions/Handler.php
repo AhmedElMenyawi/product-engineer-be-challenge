@@ -6,6 +6,8 @@ use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 use Illuminate\Validation\ValidationException;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
+use Illuminate\Auth\AuthenticationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class Handler extends ExceptionHandler
 {
@@ -28,6 +30,15 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             
         });
+
+        $this->renderable(function (ModelNotFoundException $e, $request) {
+            if ($request->expectsJson()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Resource not found.'
+                ], 404);
+            }
+        });
     }
 
     // Added this to handle validation errors and http exceptions
@@ -40,6 +51,13 @@ class Handler extends ExceptionHandler
                     'message' => 'Validation Failed',
                     'errors' => $exception->errors(),
                 ], 422);
+            }
+
+            if ($exception instanceof AuthenticationException) {
+                return response()->json([
+                    'message' => 'Unauthenticated.',
+                    'error' => class_basename($exception),
+                ], 401);
             }
 
             $status = 500;

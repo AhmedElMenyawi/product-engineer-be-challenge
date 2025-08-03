@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('task_token')->unique();
             $table->string('title');
             $table->text('description');
-            $table->foreignId('assigned_to_user_id')->nullable()->constrained('users')->onDelete('set null'); 
-            $table->foreignId('created_by_user_id')->constrained('users');
+            $table->foreignId('assigned_to')->nullable()->constrained('users')->onDelete('set null'); 
+            $table->foreignId('created_by')->constrained('users');
             $table->enum('status', ['pending', 'in_progress', 'completed','cancelled','on_hold'])->default('pending')->index();
             $table->enum('priority', ['low', 'medium', 'high'])->default('medium')->index();
             $table->foreignId('team_id')->constrained('teams');

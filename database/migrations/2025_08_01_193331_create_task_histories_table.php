@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('field_changed')->nullable();
             $table->text('old_value')->nullable();
             $table->text('new_value')->nullable();
-            $table->timestamp('changed_at')->index();
+            $table->timestamp('changed_at')->nullable()->index();
             $table->softDeletes();
             $table->timestamps();
         });

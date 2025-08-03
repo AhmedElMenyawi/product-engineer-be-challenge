@@ -23,26 +23,25 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('v1')->group(function () {
     Route::post('/login', [AuthController::class, 'login']);
-    Route::middleware('auth:sanctum')->group(function () {
+    Route::middleware(['auth:sanctum', 'throttle:api'])->group(function () {
         Route::post('/logout', [AuthController::class, 'logout']);
 
         // Tasks Routes
         Route::prefix('tasks')->group(function () {
+            Route::post('/bulk-create', [TaskController::class, 'bulkStore']);
+            Route::get('/status-summary', [TaskController::class, 'statusSummary']);
+
             Route::get('/', [TaskController::class, 'index']);
             Route::post('/', [TaskController::class, 'store']);
             Route::get('/{task_token}', [TaskController::class, 'show']);
             Route::put('/{task_token}', [TaskController::class, 'update']);
             Route::delete('/{task_token}', [TaskController::class, 'destroy']);
-            Route::post('/bulk', [TaskController::class, 'bulkStore']);
         });
 
         // Users Routes
         Route::prefix('users')->group(function () {
-            Route::get('/', [UserController::class, 'index']);
             Route::post('/', [UserController::class, 'store']);
-            Route::get('/{user_token}', [UserController::class, 'show']);
-            Route::put('/{user_token}', [UserController::class, 'update']);
-            Route::delete('/{user_token}', [UserController::class, 'destroy']);
+            Route::post('/bulk-create', [UserController::class, 'bulkStore']);
         });
     });
 });
