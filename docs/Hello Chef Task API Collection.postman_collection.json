@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "bdc6d884-eedd-411f-b211-c4acc96def78",
+		"name": "Hello Chef Task API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "10967541"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"ahmedelmenyawi@hellchef.com\",\n  \"password\": \"AE@Random123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/v1/login",
+						"description": "Authenticates the user with email and password, and returns an access token to be used in subsequent API requests"
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "2|39RLjWYR8xmWrtuB9nYLekFe3xPjoGaClFp1t5jz79e3c0cd"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{base_url}}/api/v1/logout",
+						"description": "Logs out the authenticated user by invalidating the token. Requires a valid access token in the Authorization header"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Create New Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|PzzAbYEKSx3rVO1YcqB3dyqE6aKl0SzCTxVB5xjM799f629e"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Plan August Sprint\",\n  \"description\": \"Coordinate the sprint planning meeting and define tasks.\",\n  \"priority\": \"high\",\n  \"assigned_to\": 2,\n  \"team_id\": 1,\n  \"start_time\": \"2025-08-05 10:00:00\",\n  \"end_time\": \"2025-08-10 18:00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/v1/tasks",
+						"description": "Creates a new task and assigns it to a user within a specific team board. You must define the task’s priority, who it’s assigned to (optional), and when it should take place"
+					},
+					"response": []
+				},
+				{
+					"name": "Show Task By Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|PzzAbYEKSx3rVO1YcqB3dyqE6aKl0SzCTxVB5xjM799f629e"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/v1/tasks/HC-P6VCCL",
+						"description": "Returns the details of a specific task using its unique token"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|PzzAbYEKSx3rVO1YcqB3dyqE6aKl0SzCTxVB5xjM799f629e"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}/api/v1/tasks/HC-FJHKQY",
+						"description": "Deletes a specific task by its token. Only the creator of the task can delete it"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|PzzAbYEKSx3rVO1YcqB3dyqE6aKl0SzCTxVB5xjM799f629e"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Plan August Sprint1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/v1/tasks/HC-MVRMHE",
+						"description": "Updates the task's information. Can be used to change the assigned user, description, time range, or mark the task as completed"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|PzzAbYEKSx3rVO1YcqB3dyqE6aKl0SzCTxVB5xjM799f629e"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/v1/tasks",
+						"description": "Returns a list of all tasks accessible by the authenticated user. Supports filters like date range or status if implemented"
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk Upload Tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|PzzAbYEKSx3rVO1YcqB3dyqE6aKl0SzCTxVB5xjM799f629e"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"tasks\": [\n    {\n      \"title\": \"Design home page\",\n      \"description\": \"Initial UI draft\",\n      \"priority\": \"high\",\n      \"team_id\": 1,\n      \"assigned_to\": 3,\n      \"start_time\": \"2025-08-02T10:00:00\",\n      \"end_time\": \"2025-08-02T12:00:00\"\n    },\n    {\n      \"title\": \"Setup DB\",\n      \"description\": \"Configure PostgreSQL\",\n      \"priority\": \"medium\",\n      \"team_id\": 1,\n      \"assigned_to\": null,\n      \"end_time\": \"2025-08-03T10:00:00\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/v1/tasks/bulk-create"
+					},
+					"response": []
+				},
+				{
+					"name": "Status Summary By Date Range",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|PzzAbYEKSx3rVO1YcqB3dyqE6aKl0SzCTxVB5xjM799f629e"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/tasks/status-summary?from=2025-08-01&to=2025-08-03",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"status-summary"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2025-08-01"
+								},
+								{
+									"key": "to",
+									"value": "2025-08-03"
+								}
+							]
+						},
+						"description": "Returns a summary of tasks grouped by statuses and filtered by date range"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Store User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|PzzAbYEKSx3rVO1YcqB3dyqE6aKl0SzCTxVB5xjM799f629e"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Mohamed\",\n  \"last_name\": \"Salah\",\n  \"email\": \"msalah+3@example.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/v1/users",
+						"description": "Creates a single user in the system with auto-generated password. Returns the created user and their temporary password in the response for testing"
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk Store Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|PzzAbYEKSx3rVO1YcqB3dyqE6aKl0SzCTxVB5xjM799f629e"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"users\": [\n    {\n      \"first_name\": \"Mohamed\",\n      \"last_name\": \"Salah\",\n      \"email\": \"msalah+30@example.com\"\n    },\n    {\n      \"first_name\": \"Aly\",\n      \"last_name\": \"Farag\",\n      \"email\": \"afarag@example.com\"\n    },\n    {\n      \"first_name\": \"Nour\",\n      \"last_name\": \"El Sherbini\",\n      \"email\": \"nelsherbini@example.com\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/v1/users/bulk-create",
+						"description": "Creates multiple users in one API call. Each user has an auto-generated password, returned in the response for testing"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
